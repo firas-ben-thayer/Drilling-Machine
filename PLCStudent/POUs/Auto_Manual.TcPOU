@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <POU Name="Auto_Manual" Id="{c8ad19c2-a76a-4b26-9eca-0b80aee427ec}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM Auto_Manual
+VAR
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF gvl.ixAuto THEN
+	Auto_Mode();	
+END_IF]]></ST>
+    </Implementation>
+    <LineIds Name="Auto_Manual">
+      <LineId Id="7" Count="2" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.12">
+  <GVL Name="GVL" Id="{37e7b83a-4169-4cd7-8e7e-6288cf9abb33}">
+    <Declaration><![CDATA[{attribute 'qualified_only'}
+VAR_GLOBAL
+	qxGreenLamp		AT %Q* : BOOL;
+	qxAout		 	AT %Q* : BOOL; 
+	qxAin 			AT %Q* : BOOL; 
+	qxBout		 	AT %Q* : BOOL; 
+	qxBin 			AT %Q* : BOOL; 
+	qxDrillDown 	AT %Q* : BOOL;
+	qxDrillUp		AT %Q* : BOOL;
+	qxLampEmStopOk	AT %Q* : BOOL;
+	qxLampSafetyOk  AT %Q* : BOOL;
+	qxLampHomePos   AT %Q* : BOOL;
+	
+	
+	ixStart			AT %I* : BOOL;
+	ixStop			AT %I* : BOOL;
+	ixAout			AT %I* : BOOL;
+	ixAin			AT %I* : BOOL;
+	ixBout			AT %I* : BOOL;
+	ixBin			AT %I* : BOOL;
+	ixDrillUp		AT %I* : BOOL;
+	ixDrillDown		AT %I* : BOOL;
+
+	ixAuto			AT %I* : BOOL;
+	ixBtn1EmStopOk	AT %I* : BOOL;
+	ixBtn2EmStopOk	AT %I* : BOOL;	
+	ixSafety1StopOk	AT %I* : BOOL;
+	ixSafety2StopOk	AT %I* : BOOL;	
+	ixBtnReset		AT %I* : BOOL;
+	ixBtnAout		AT %I* : BOOL;
+	ixBtnAin		AT %I* : BOOL;
+	ixBtnBout		AT %I* : BOOL;
+	ixBtnBin		AT %I* : BOOL;
+	ixBtnDrillOut	AT %I* : BOOL;
+	ixBtnDrillIn	AT %I* : BOOL;
+	iwCounter		AT %I*	:INT;
+	iwOrderNum		AT %I*	:INT;
+END_VAR]]></Declaration>
+  </GVL>
+</TcPlcObject>

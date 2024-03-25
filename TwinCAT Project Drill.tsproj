@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<TcSmProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.beckhoff.com/schemas/2012/07/TcSmProject" TcSmVersion="1.0" TcVersion="3.1.4024.53">
+	<Project ProjectGUID="{B44999BF-4E81-4CA3-9A97-57610D6FFEB3}" TargetNetId="192.168.4.1.1.1" Target64Bit="true" ShowHideConfigurations="#x306">
+		<System>
+			<Settings MaxCpus="16" NonWinCpus="1"/>
+			<Tasks>
+				<Task Id="3" Priority="20" CycleTime="300000" AmsPort="350" AdtTasks="true">
+					<Name>PlcTask</Name>
+				</Task>
+			</Tasks>
+		</System>
+		<Plc>
+			<Project GUID="{E92C0D63-EC27-4B8B-8304-58C90E154294}" Name="PLCSim" PrjFilePath="PLCSim\PLCSim.plcproj" TmcFilePath="PLCSim\PLCSim.tmc" ReloadTmc="true" AmsPort="851" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502000" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLCSim\PLCSim.tmc" TmcHash="{50501688-2A5E-0668-7C05-17A36C51E333}">
+					<Name>PLCSim Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>MAIN.ixLampStarted</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixSliderAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixSliderAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixSliderBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixSliderBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixDrillDown</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixDrillUp</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixLampEmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixLampSafetyOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.ixLampHomePos</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>MAIN.qxButtonStart</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxButtonStop</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSliderAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSliderAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSliderBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSliderBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxDrillUp</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxDrillDown</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxAuto</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtn1EmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtn2EmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSafety1StopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxSafety2StopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnDrillOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qxBtnDrillIn</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.nCnt</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>MAIN.qsOrderNum</Name>
+							<Type>INT</Type>
+						</Var>
+					</Vars>
+					<UnrestoredVarLinks ImportTime="2023-01-12T16:57:51">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^PLCSim^PLCSim Instance" Type="2">
+							<OwnerB Name="TIPC^PLCStudent^PLCStudent Instance">
+								<Link VarA="MAIN.qxBtnEmStopOk" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^ControlFBD.ixBtnEmStopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="MAIN.qxSafetyStopOk" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^ControlFBD.ixSafetyStopOk" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>30000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502001"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+			<Project GUID="{7C8EEA82-B80E-4F1E-8DE1-4DB4142D331C}" Name="PLCStudent" PrjFilePath="PLCStudent\PLCStudent.plcproj" TmcFilePath="PLCStudent\PLCStudent.tmc" ReloadTmc="true" AmsPort="852" FileArchiveSettings="#x000e" SymbolicMapping="true">
+				<Instance Id="#x08502040" TcSmClass="TComPlcObjDef" KeepUnrestoredLinks="2" TmcPath="PLCStudent\PLCStudent.tmc" TmcHash="{45A525DA-F393-2FDB-A9F9-386AB5B4450D}">
+					<Name>PLCStudent Instance</Name>
+					<CLSID ClassFactory="TcPlc30">{08500001-0000-0000-F000-000000000064}</CLSID>
+					<Vars VarGrpType="1">
+						<Name>PlcTask Inputs</Name>
+						<Var>
+							<Name>GVL.ixStart</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixStop</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixDrillUp</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixDrillDown</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixAuto</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtn1EmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtn2EmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixSafety1StopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixSafety2StopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnReset</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnDrillOut</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.ixBtnDrillIn</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.iwCounter</Name>
+							<Type>INT</Type>
+						</Var>
+						<Var>
+							<Name>GVL.iwOrderNum</Name>
+							<Type>INT</Type>
+						</Var>
+					</Vars>
+					<Vars VarGrpType="2" AreaNo="1">
+						<Name>PlcTask Outputs</Name>
+						<Var>
+							<Name>GVL.qxGreenLamp</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxAout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxAin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxBout</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxBin</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxDrillDown</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxDrillUp</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxLampEmStopOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxLampSafetyOk</Name>
+							<Type>BOOL</Type>
+						</Var>
+						<Var>
+							<Name>GVL.qxLampHomePos</Name>
+							<Type>BOOL</Type>
+						</Var>
+					</Vars>
+					<UnrestoredVarLinks ImportTime="2023-01-13T09:43:49">
+						<OwnerA Name="OutputSrc" Prefix="TIPC^PLCStudent^PLCStudent Instance" Type="2">
+							<OwnerB Name="TIPC^PLCSim^PLCSim Instance">
+								<Link VarA="ControlFBD.ixLampHomePos" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampHomePos" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2023-03-21T08:56:44">
+						<OwnerA Name="InputDst" Prefix="TIPC^PLCStudent^PLCStudent Instance" Type="1">
+							<OwnerB Name="TIPC^PLCSim^PLCSim Instance">
+								<Link VarA="ControlFBD.ixAuto" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxAuto" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtn1EmStopOk" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtn1EmStopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtn2EmStopOk" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtn2EmStopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnAin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnAin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnAout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnAout" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnBin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnBin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnBout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnBout" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnDrillIn" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnDrillIn" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnDrillOut" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnDrillOut" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixBtnReset" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxBtnReset" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixButtonStart" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxButtonStart" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixButtonStop" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxButtonStop" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixDrillDown" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxDrillDown" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixDrillUp" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxDrillUp" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSafety1StopOk" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSafety1StopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSafety2StopOk" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSafety2StopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSliderAin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderAin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSliderAout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderAout" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSliderBin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderBin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.ixSliderBout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderBout" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^PLCStudent^PLCStudent Instance" Type="2">
+							<OwnerB Name="TIPC^PLCSim^PLCSim Instance">
+								<Link VarA="ControlFBD.qxDrillDown" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixDrillDown" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxDrillUp" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixDrillUp" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxLampEmStopOk" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampEmStopOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxLampHomePos" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampHomePos" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxLampSafetyOk" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampSafetyOk" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxLampStarted" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampStarted" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxSliderAin" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderAin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxSliderAout" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderAout" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxSliderBin" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderBin" RestoreInfo="ANotFound"/>
+								<Link VarA="ControlFBD.qxSliderBout" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderBout" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<UnrestoredVarLinks ImportTime="2023-03-21T09:18:04">
+						<OwnerA Name="InputDst" Prefix="TIPC^PLCStudent^PLCStudent Instance" Type="1">
+							<OwnerB Name="TIPC^PLCSim^PLCSim Instance">
+								<Link VarA="GVL.ixButtonStart" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxButtonStart" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.ixButtonStop" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxButtonStop" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.ixSliderAin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderAin" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.ixSliderAout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderAout" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.ixSliderBin" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderBin" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.ixSliderBout" TypeA="BOOL" InOutA="0" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Outputs^MAIN.qxSliderBout" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+						<OwnerA Name="OutputSrc" Prefix="TIPC^PLCStudent^PLCStudent Instance" Type="2">
+							<OwnerB Name="TIPC^PLCSim^PLCSim Instance">
+								<Link VarA="GVL.qxLampStarted" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixLampStarted" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.qxSliderAin" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderAin" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.qxSliderAout" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderAout" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.qxSliderBin" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderBin" RestoreInfo="ANotFound"/>
+								<Link VarA="GVL.qxSliderBout" TypeA="BOOL" InOutA="1" GuidA="{18071995-0000-0000-0000-000000000030}" VarB="PlcTask Inputs^MAIN.ixSliderBout" RestoreInfo="ANotFound"/>
+							</OwnerB>
+						</OwnerA>
+					</UnrestoredVarLinks>
+					<Contexts>
+						<Context>
+							<Id>0</Id>
+							<Name>PlcTask</Name>
+							<ManualConfig>
+								<OTCID>#x02010030</OTCID>
+							</ManualConfig>
+							<Priority>20</Priority>
+							<CycleTime>30000000</CycleTime>
+						</Context>
+					</Contexts>
+					<TaskPouOids>
+						<TaskPouOid Prio="20" OTCID="#x08502041"/>
+					</TaskPouOids>
+				</Instance>
+			</Project>
+		</Plc>
+		<Io/>
+	</Project>
+	<Mappings>
+		<MappingInfo Identifier="{00000000-2001-0850-0020-500840205008}" Id="#x02030010"/>
+		<OwnerA Name="TIPC^PLCSim^PLCSim Instance">
+			<OwnerB Name="TIPC^PLCStudent^PLCStudent Instance">
+				<Link VarA="PlcTask Inputs^MAIN.ixDrillDown" VarB="PlcTask Outputs^GVL.qxDrillDown"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixDrillUp" VarB="PlcTask Outputs^GVL.qxDrillUp"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixLampEmStopOk" VarB="PlcTask Outputs^GVL.qxLampEmStopOk"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixLampHomePos" VarB="PlcTask Outputs^GVL.qxLampHomePos"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixLampSafetyOk" VarB="PlcTask Outputs^GVL.qxLampSafetyOk"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixLampStarted" VarB="PlcTask Outputs^GVL.qxGreenLamp"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixSliderAin" VarB="PlcTask Outputs^GVL.qxAin"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixSliderAout" VarB="PlcTask Outputs^GVL.qxAout"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixSliderBin" VarB="PlcTask Outputs^GVL.qxBin"/>
+				<Link VarA="PlcTask Inputs^MAIN.ixSliderBout" VarB="PlcTask Outputs^GVL.qxBout"/>
+				<Link VarA="PlcTask Outputs^MAIN.nCnt" VarB="PlcTask Inputs^GVL.iwCounter"/>
+				<Link VarA="PlcTask Outputs^MAIN.qsOrderNum" VarB="PlcTask Inputs^GVL.iwOrderNum"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxAuto" VarB="PlcTask Inputs^GVL.ixAuto"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtn1EmStopOk" VarB="PlcTask Inputs^GVL.ixBtn1EmStopOk"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtn2EmStopOk" VarB="PlcTask Inputs^GVL.ixBtn2EmStopOk"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnAin" VarB="PlcTask Inputs^GVL.ixBtnAin"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnAout" VarB="PlcTask Inputs^GVL.ixBtnAout"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnBin" VarB="PlcTask Inputs^GVL.ixBtnBin"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnBout" VarB="PlcTask Inputs^GVL.ixBtnBout"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnDrillIn" VarB="PlcTask Inputs^GVL.ixBtnDrillIn"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnDrillOut" VarB="PlcTask Inputs^GVL.ixBtnDrillOut"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxBtnReset" VarB="PlcTask Inputs^GVL.ixBtnReset"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxButtonStart" VarB="PlcTask Inputs^GVL.ixStart"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxButtonStop" VarB="PlcTask Inputs^GVL.ixStop"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxDrillDown" VarB="PlcTask Inputs^GVL.ixDrillDown"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxDrillUp" VarB="PlcTask Inputs^GVL.ixDrillUp"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSafety1StopOk" VarB="PlcTask Inputs^GVL.ixSafety1StopOk"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSafety2StopOk" VarB="PlcTask Inputs^GVL.ixSafety2StopOk"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSliderAin" VarB="PlcTask Inputs^GVL.ixAin"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSliderAout" VarB="PlcTask Inputs^GVL.ixAout"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSliderBin" VarB="PlcTask Inputs^GVL.ixBin"/>
+				<Link VarA="PlcTask Outputs^MAIN.qxSliderBout" VarB="PlcTask Inputs^GVL.ixBout"/>
+			</OwnerB>
+		</OwnerA>
+	</Mappings>
+</TcSmProject>
